@@ -1,0 +1,91 @@
+<livingRoom>
+
+  <floor>
+    <backpack>
+      <sketchbook></sketchbook>
+    </backpack>
+  </floor>
+
+  <desk>
+    <pile>
+      <book id="Good and Cheap"></book>
+      <book id="Pesach Haggadah"></book>
+    </pile>
+
+    <pile>
+      <loosePapers id="Housekeeping by Design: Hotels and Labor">Introduction</loosepapers>
+      <loosePapers id="Housekeeping by Design: Hotels and Labor">Go Green: Design, Hotels, and the Sustainability Paradox</loosepapers>
+    </pile>
+  </desk>
+
+  <cabinet>
+    <pile>
+      <book id="How to"></book>
+      <book id="Asufa Haggadah"></book>
+    </pile>
+  </cabinet>
+
+  <bookcase>
+    <!-- I don't read any of this -->
+  </bookcase>
+
+  <miniFridge>
+    <impromptuPile>
+      <book id="Haggai, Zechariah, Malahi"></book>
+      <book id="Contemporary Halakhic Problems"></book>
+    </impromptuPile>
+  </miniFridge>
+
+  <coffeeTable>
+    <magazine id="T Magazine">The Design Issue</magazine>
+  </coffeeTable>
+
+  <shelves>
+    <thirdShelf>
+      <textbook id="Intro to Design Studies"></textbook>
+      <oldTextbook id="History of Modern Design"></oldTextbook>
+      <notebook id="design studies notebook"></notebook>
+      <oldNotebook id="art history notebook 1"></oldNotebook>
+      <oldNotebook id="art history notebook 2"></oldNotebook>
+    </thirdShelf>
+  </shelves>
+
+</livingRoom>
+
+<bedroom>
+  <windowsill>
+    <book id="Harry Potter and the Chamber of Secrets"></book>
+  </windowsill>
+</bedroom>
+
+[bookType=religious]
+result: #Pesach Haggadah, #Asufa Haggadah, #Haggai, Zechariah, Malahi, #Contemporary Halakhic Problems
+
+book:visited
+result: #Good and Cheap, #How to, #Asufa Haggadah, #Harry Potter and the Chamber of Secrets
+
+backpack,pile1,pile2,impromptuPile,coffeeTable,thirdShelf,windowsill:first-child
+result:
+  <sketchbook></sketchbook>
+  <book id="Good and Cheap"></book>
+  <loosePapers id="Housekeeping by Design: Hotels and Labor">Introduction</loosepapers>
+  <book id="How to"></book>
+  <book id="Haggai, Zechariah, Malahi"></book>
+  <magazine id="T Magazine">The Design Issue</magazine>
+  <textbook id="Intro to Design Studies"></textbook>
+  <book id="Harry Potter and the Chamber of Secrets"></book>
+
+book:lang(he)
+result: #Pesach Haggadah, #Asufa Haggadah
+
+desk > pile 
+result:
+    <pile>
+      <book id="Good and Cheap"></book>
+      <book id="Pesach Haggadah"></book>
+    </pile>
+
+    <pile>
+      <loosePapers id="Housekeeping by Design: Hotels and Labor">Introduction</loosepapers>
+      <loosePapers id="Housekeeping by Design: Hotels and Labor">Go Green: Design, Hotels, and the Sustainability Paradox</loosepapers>
+    </pile>
